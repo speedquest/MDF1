@@ -20,7 +20,7 @@
 @synthesize rackArray;
 @synthesize detailsViewController;
 
-
+//  Implementing the Edit Button
 - (IBAction)clickEdit:(id)sender
 {
     if (theTableView.editing == NO)
@@ -33,6 +33,7 @@
 
 - (void)viewDidLoad
 {
+    //  Establishing the Array details
     {
         boxArray = [[NSMutableArray alloc] initWithObjects:
                      @"Box 1",
@@ -101,6 +102,7 @@
     return boxArray.count;
 }
 
+//  Editing the Array and it's contents
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return UITableViewCellEditingStyleDelete;
