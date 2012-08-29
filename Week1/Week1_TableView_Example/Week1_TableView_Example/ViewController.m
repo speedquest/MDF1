@@ -35,26 +35,26 @@
 {
     {
         boxArray = [[NSMutableArray alloc] initWithObjects:
-                     @"Box One",
-                     @"Box Two",
-                     @"Box Three",
-                     @"Box Four",
-                     @"Box Five",
-                     @"Box Six",
-                     @"Box Seven",
-                     @"Box Eight",
-                     @"Box Nine",
-                     @"Box Ten",
-                     @"Box Eleven",
-                     @"Box Twelve",
-                     @"Box Thirteen",
-                     @"Box Fourteen",
-                     @"Box Fifteen",
-                     @"Box Sixteen",
-                     @"Box Seventeen",
-                     @"Box Eighteen",
-                     @"Box Nineteen",
-                     @"Box Twenty",
+                     @"Box 1",
+                     @"Box 2",
+                     @"Box 3",
+                     @"Box 4",
+                     @"Box 5",
+                     @"Box 6",
+                     @"Box 7",
+                     @"Box 8",
+                     @"Box 9",
+                     @"Box 10",
+                     @"Box 11",
+                     @"Box 12",
+                     @"Box 13",
+                     @"Box 14",
+                     @"Box 15",
+                     @"Box 16",
+                     @"Box 17",
+                     @"Box 18",
+                     @"Box 19",
+                     @"Box 20",
                      nil];
         rackArray = [[NSMutableArray alloc] initWithObjects:
                     @"Rack 14",
@@ -83,6 +83,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
+
 - (void)viewDidUnload
 {
     [super viewDidUnload];
@@ -109,7 +110,6 @@
 {
     if (editingStyle == UITableViewCellEditingStyleDelete)
     {
-        NSLog(@"This will delete row=%d", indexPath.row);
         [boxArray removeObjectAtIndex:indexPath.row];
         [theTableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     }
@@ -120,7 +120,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    
+    //  Uses the iOS library Dequeue to reassign visible table cells
     CustomCell *cell = [theTableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil)
@@ -130,7 +130,6 @@
         for (UIView *view in views){
             if([view isKindOfClass:[CustomCell class]])
             {
-                
                 cell = (CustomCell*)view;
                 cell.boxLabel.text = (NSString*)[boxArray objectAtIndex:indexPath.row];
                 cell.rackLabel.text = (NSString*)[rackArray objectAtIndex:indexPath.row];
@@ -142,6 +141,29 @@
     
     return cell;
 }
+
+//  Function to Display the Details View
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    //  Assigning temp variables to the actual Array info for manipulation
+    NSString *boxPicked = [boxArray objectAtIndex:[indexPath row]];
+    NSString *rackPicked = [rackArray objectAtIndex:[indexPath row]];
+    //  This will merge the two strings for display
+    NSString *mergeBoxRack = [[NSString alloc] initWithFormat: @"%@ \n \n %@", boxPicked, rackPicked];
     
+    
+    //  Actually showing the Details View
+    if (self.detailsViewController == nil)          //  
+    {
+        DetailedView *theDetailedView = [[DetailedView alloc]initWithNibName:@"DetailedView" bundle:[NSBundle mainBundle]];
+        self.detailsViewController = theDetailedView;
+    }
+    
+    //  Sending the combined string (Box, Rack) to the Details View and displaying it
+    [self.detailsViewController initWithPickedBox:mergeBoxRack];
+    [self presentModalViewController:detailsViewController animated:TRUE];  // Animates the view change to a Modal view change
+}
+
+
 
 @end
