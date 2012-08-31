@@ -17,7 +17,7 @@
 @synthesize boxNumber;
 @synthesize pickedBox;
 
--(id) initWithPickedBox:(NSString *)text
+-(id) selectPickedBox:(NSString *)text
 {
     self.pickedBox = text;
     [boxNumber setText:[self pickedBox]];

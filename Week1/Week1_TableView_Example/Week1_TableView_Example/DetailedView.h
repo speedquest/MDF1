@@ -20,7 +20,7 @@
 @property (nonatomic, retain) IBOutlet UILabel *boxNumber;
 @property (nonatomic, retain) NSString *pickedBox;
 
--(id) initWithPickedBox:(NSString *) text;
+-(id) selectPickedBox:(NSString *) text;
 
 
 @end

@@ -155,15 +155,16 @@
     
     
     //  Actually showing the Details View
-    if (self.detailsViewController == nil)          //  
+    if (self.detailsViewController == nil) 
     {
-        DetailedView *theDetailedView = [[DetailedView alloc]initWithNibName:@"DetailedView" bundle:[NSBundle mainBundle]];
+        DetailedView *theDetailedView = [[DetailedView alloc]initWithNibName:@"DetailedView" bundle:nil];
         self.detailsViewController = theDetailedView;
     }
     
     //  Sending the combined string (Box, Rack) to the Details View and displaying it
-    [self.detailsViewController initWithPickedBox:mergeBoxRack];
+    [self.detailsViewController selectPickedBox:mergeBoxRack];
     [self presentModalViewController:detailsViewController animated:TRUE];  // Animates the view change to a Modal view change
+
 }
 
 
