@@ -7,6 +7,7 @@
 //
 
 #import "FirstViewController.h"
+#import "WarehouseProtocolController.h"
 
 @interface FirstViewController ()
 
@@ -18,8 +19,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"First", @"First");
-        self.tabBarItem.image = [UIImage imageNamed:@"first"];
+        self.title = NSLocalizedString(@"Home", @"Home");
+        self.tabBarItem.image = [UIImage imageNamed:@"Home_24"];
     }
     return self;
 }
@@ -41,4 +42,28 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+/*//  Warehouse Protocols Button Action
+- (IBAction)onClick:(id)sender
+{
+     WarehouseProtocolController *protocolView = [[WarehouseProtocolController alloc] initWithNibName:@"WarehouseProtocolController" bundle:nil];
+    if (protocolView != nil)
+    //  Moves the view to the WarehouseProtocalController.xib
+    {
+        // [self.navigationController pushViewController:protocolView animated:true];
+        [self presentModalViewController:protocolView animated:TRUE];  // Animates the view change to a Modal view change
+
+    }
+     
+}
+*/
+
+//  Brings up the Warehouse Protocols View
+- (IBAction)onClick:(id)sender
+{
+    WarehouseProtocolController *warehouseView = [[WarehouseProtocolController alloc] initWithNibName:@"WarehouseProtocolController" bundle:nil];
+    if (warehouseView != nil)
+    {
+        [self.navigationController pushViewController:warehouseView animated:true];
+    }
+}
 @end

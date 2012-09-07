@@ -10,8 +10,6 @@
 #import "FirstViewController.h"
 #import "SecondViewController.h"
 #import "ThirdViewController.h"
-#import "WarehouseProtocolController.h"
-
 
 
 @implementation AppDelegate
@@ -31,16 +29,14 @@
     //  Second tab view
     UIViewController *viewControllerTwo = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
     
-    //  Third tab view
-    UIViewController *viewControllerThree = [[ThirdViewController alloc] initWithNibName:@"ThirdViewController" bundle:nil];
-    
     //  navController bar (part of viewTwo)
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewControllerOne];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewControllerTwo];
     
-
-
+    //  Third tab view
+        UIViewController *viewControllerThree = [[ThirdViewController alloc] initWithNibName:@"ThirdViewController" bundle:nil];
+    
     self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = @[navController, viewControllerTwo, viewControllerThree];
+    self.tabBarController.viewControllers = @[viewControllerOne, navController, viewControllerThree];
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;

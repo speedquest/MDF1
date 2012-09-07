@@ -10,4 +10,7 @@
 
 @interface FirstViewController : UIViewController
 
+//  Establishing the onClick for First View
+- (IBAction)onClick:(id)sender;
+
 @end
