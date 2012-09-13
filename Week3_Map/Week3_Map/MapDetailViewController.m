@@ -17,6 +17,7 @@
 @end
 
 @implementation MapDetailViewController
+@synthesize mapTheView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,7 +35,7 @@
 }
 
 
-- (IBAction)mapView:(CLLocationCoordinate2D)coord title:(NSString *)title
+- (IBAction)implementMap:(CLLocationCoordinate2D)coord title:(NSString *)title
 {
     NSString *mCoord = [[NSString alloc]initWithFormat:@"Lon: %f Lat: %f", coord.longitude, coord.latitude];
     
@@ -47,11 +48,11 @@
     newRegion.span.latitudeDelta = 0.0333;
     newRegion.span.longitudeDelta = 0.0333;
     
-    self.mapView.delegate = (id)self;
+    self.mapTheView.delegate = (id)self;
     
     self.title = title;
     
-    [self.mapView setRegion:newRegion animated:YES];
+    [self.mapTheView setRegion:newRegion animated:YES];
     
     CLLocationCoordinate2D location;
     location.latitude = coord.latitude;
@@ -62,15 +63,15 @@
 	sendDetail1.warehouseName=title;
 	sendDetail1.warehouseDetail=@"Details";
     
-    [detailMapView addAnnotation:sendDetail1];
+    [mapTheView addAnnotation:sendDetail1];
 }
 
 
-- (MKAnnotationView *)theMapView:(MKMapView *)theMapView viewForAnnotation:(id <MKAnnotation>)annotation {
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
     if ([annotation isKindOfClass:[MKUserLocation class]])
         return nil;
     
-    MKPinAnnotationView* pinView = (MKPinAnnotationView*)[self.mapView dequeueReusableAnnotationViewWithIdentifier:@"MapLocation"];
+    MKPinAnnotationView* pinView = (MKPinAnnotationView*)[self.mapTheView dequeueReusableAnnotationViewWithIdentifier:@"MapLocation"];
     
     if (!pinView)
         pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"PinAnnotation"];

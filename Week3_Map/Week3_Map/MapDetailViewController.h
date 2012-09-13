@@ -14,7 +14,7 @@
 
 @interface MapDetailViewController : UIViewController
 {
-    IBOutlet MKMapView *detailMapView;
+    IBOutlet MKMapView *mapTheView;
     IBOutlet UILabel *locationName;
     IBOutlet UILabel *latLong;
     MapLocation* sendDetail1;
@@ -22,7 +22,7 @@
     
 }
 
-@property (retain) IBOutlet MKMapView *mapView;
+@property (retain) IBOutlet MKMapView *mapTheView;
 -(IBAction)implementMap:(CLLocationCoordinate2D)coord title:(NSString *)warehouseName;
 
 @end
