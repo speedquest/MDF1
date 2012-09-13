@@ -19,7 +19,6 @@
 		A4900A3916012968004F9C4A /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4900A3816012968004F9C4A /* SecondViewController.m */; };
 		A4900A3B16012968004F9C4A /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = A4900A3A16012968004F9C4A /* second.png */; };
 		A4900A3D16012968004F9C4A /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4900A3C16012968004F9C4A /* second@2x.png */; };
-		A4900A4016012968004F9C4A /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4900A3E16012968004F9C4A /* FirstViewController.xib */; };
 		A4900A4316012968004F9C4A /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4900A4116012968004F9C4A /* SecondViewController.xib */; };
 		A4900A5816012EF3004F9C4A /* MapDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4900A5616012EF3004F9C4A /* MapDetailViewController.m */; };
 		A4900A5916012EF3004F9C4A /* MapDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4900A5716012EF3004F9C4A /* MapDetailViewController.xib */; };
@@ -27,6 +26,7 @@
 		A4900A5D16013416004F9C4A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4900A5C16013416004F9C4A /* MapKit.framework */; };
 		A4900A5F160135C7004F9C4A /* globe_24.png in Resources */ = {isa = PBXBuildFile; fileRef = A4900A5E160135C7004F9C4A /* globe_24.png */; };
 		A4900A62160137C1004F9C4A /* MapLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = A4900A61160137C1004F9C4A /* MapLocation.m */; };
+		A4900A7F160248C8004F9C4A /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4900A7E160248C8004F9C4A /* FirstViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,7 +48,6 @@
 		A4900A3816012968004F9C4A /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		A4900A3A16012968004F9C4A /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		A4900A3C16012968004F9C4A /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
-		A4900A3F16012968004F9C4A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController.xib; sourceTree = "<group>"; };
 		A4900A4216012968004F9C4A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController.xib; sourceTree = "<group>"; };
 		A4900A5516012EF3004F9C4A /* MapDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapDetailViewController.h; sourceTree = "<group>"; };
 		A4900A5616012EF3004F9C4A /* MapDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapDetailViewController.m; sourceTree = "<group>"; };
@@ -58,6 +57,7 @@
 		A4900A5E160135C7004F9C4A /* globe_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = globe_24.png; sourceTree = "<group>"; };
 		A4900A60160137C1004F9C4A /* MapLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapLocation.h; sourceTree = "<group>"; };
 		A4900A61160137C1004F9C4A /* MapLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapLocation.m; sourceTree = "<group>"; };
+		A4900A7E160248C8004F9C4A /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FirstViewController.xib; path = ../FirstViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +112,7 @@
 				A4900A2E16012968004F9C4A /* AppDelegate.m */,
 				A4900A3016012968004F9C4A /* FirstViewController.h */,
 				A4900A3116012968004F9C4A /* FirstViewController.m */,
-				A4900A3E16012968004F9C4A /* FirstViewController.xib */,
+				A4900A7E160248C8004F9C4A /* FirstViewController.xib */,
 				A4900A3316012968004F9C4A /* first.png */,
 				A4900A3516012968004F9C4A /* first@2x.png */,
 				A4900A3716012968004F9C4A /* SecondViewController.h */,
@@ -197,11 +197,11 @@
 				A4900A3616012968004F9C4A /* first@2x.png in Resources */,
 				A4900A3B16012968004F9C4A /* second.png in Resources */,
 				A4900A3D16012968004F9C4A /* second@2x.png in Resources */,
-				A4900A4016012968004F9C4A /* FirstViewController.xib in Resources */,
 				A4900A4316012968004F9C4A /* SecondViewController.xib in Resources */,
 				A4900A5916012EF3004F9C4A /* MapDetailViewController.xib in Resources */,
 				A4900A5B16013106004F9C4A /* storage_24.png in Resources */,
 				A4900A5F160135C7004F9C4A /* globe_24.png in Resources */,
+				A4900A7F160248C8004F9C4A /* FirstViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,14 +230,6 @@
 				A4900A2816012968004F9C4A /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		A4900A3E16012968004F9C4A /* FirstViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A4900A3F16012968004F9C4A /* en */,
-			);
-			name = FirstViewController.xib;
 			sourceTree = "<group>";
 		};
 		A4900A4116012968004F9C4A /* SecondViewController.xib */ = {
@@ -341,6 +333,7 @@
 				A4900A4816012968004F9C4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

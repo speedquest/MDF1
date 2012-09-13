@@ -153,21 +153,19 @@
  
 }
 
--(void)onEdit
+
+- (IBAction)edit:(id)sender
 {
-    [locationListView setEditing:!locationListView.editing animated:YES];
-    
-    if (locationListView.editing)
-    {
-        [self.navigationItem.rightBarButtonItem setTitle:@"Done"];
-    }
-    else
-    {
-        [self.navigationItem.rightBarButtonItem setTitle:@"Edit"];
+    if (locationListView.isEditing == NO){
+        [editBtn setTitle:@"DONE" forState:UIControlStateNormal];
+        [editBtn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+        [locationListView setEditing:YES animated:YES];
+    }else{
+        [locationListView setEditing:NO animated:YES];
+        [editBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        [editBtn setTitle:@"EDIT" forState:UIControlStateNormal];
     }
 }
-
-
 //  Setting up the Array count to figure out how many there are
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {

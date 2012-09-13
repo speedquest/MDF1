@@ -14,7 +14,10 @@
 
 @synthesize window = _window;
 @synthesize tabBarController = _tabBarController;
-@synthesize listView,detailedMapView,a,b,c,d,e,f,g,h,i,j,locArray;
+@synthesize listView;
+@synthesize detailedMapView;
+@synthesize a,b,c,d,e,f,g,h,i,j;
+@synthesize locArray;
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -22,14 +25,13 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     UIViewController *viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil];
-    
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController1];
+    UINavigationController *navBar = [[UINavigationController alloc] initWithRootViewController:viewController1];
     
     
     UIViewController *viewController2 = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
     
     self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = [NSArray arrayWithObjects:navController, viewController2, nil];
+    self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, nil];
     
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
