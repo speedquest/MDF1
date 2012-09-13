@@ -148,6 +148,8 @@
     [locationArray addObject:mapLocation8];
     [locationArray addObject:mapLocation9];
     [locationArray addObject:mapLocation10];
+    
+    NSLog(@"The array is%@",locationArray);
  
 }
 
@@ -201,7 +203,7 @@
     }
     
     MapLocation *loc = [locationArray objectAtIndex:indexPath.row];
-	cell.textLabel.text = loc.title;
+	cell.textLabel.text = loc.warehouseName;
     
     return cell;
 }

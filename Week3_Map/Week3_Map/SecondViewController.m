@@ -38,7 +38,7 @@
     MKPinAnnotationView* pinView = (MKPinAnnotationView*)[self.listView dequeueReusableAnnotationViewWithIdentifier:@"MapLocation"];
     
     if (!pinView)
-        pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"CustomPinAnnotation"];
+        pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"PinAnnotation"];
     else
         
         pinView.enabled = YES;
@@ -77,8 +77,8 @@
     [listView removeAnnotations:listView.annotations];
     for (int counter = 0; arrayDisplayLoc.count > counter; counter++)
     {
-        MapLocation *theloc = [arrayDisplayLoc objectAtIndex:counter];
-        [listView addAnnotation:theloc];
+        MapLocation *locations = [arrayDisplayLoc objectAtIndex:counter];
+        [listView addAnnotation:locations];
     }
     
 }

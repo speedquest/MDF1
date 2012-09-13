@@ -65,6 +65,21 @@
     [detailMapView addAnnotation:sendDetail1];
 }
 
+
+- (MKAnnotationView *)theMapView:(MKMapView *)theMapView viewForAnnotation:(id <MKAnnotation>)annotation {
+    if ([annotation isKindOfClass:[MKUserLocation class]])
+        return nil;
+    
+    MKPinAnnotationView* pinView = (MKPinAnnotationView*)[self.mapView dequeueReusableAnnotationViewWithIdentifier:@"MapLocation"];
+    
+    if (!pinView)
+        pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"PinAnnotation"];
+    else
+        pinView.enabled = YES;
+    pinView.canShowCallout = YES;
+    
+    return pinView;
+}
 - (void)viewDidUnload
 {
     [super viewDidUnload];
