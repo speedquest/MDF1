@@ -60,7 +60,7 @@
 	sendDetail1=[[MapLocation alloc] init];
 	sendDetail1.coordinate=location;
 	sendDetail1.warehouseName=title;
-	sendDetail1.warehouseDetail=@"Eat";
+	sendDetail1.warehouseDetail=@"Details";
     
     [detailMapView addAnnotation:sendDetail1];
 }
