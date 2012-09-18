@@ -9,13 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "SecondViewController.h"
 #import "MapDetailViewController.h"
+#import "FirstViewController.h"
 #import "MapLocation.h"
 
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate>
 {
-    UIViewController *listView;
-    MapDetailViewController *detailedMapView;
+    FirstViewController *listView;
+    SecondViewController *detailedMapView;
     MapLocation *a;
     MapLocation *b;
     MapLocation *c;
@@ -25,11 +26,11 @@
     MapLocation *g;
     MapLocation *h;
     MapLocation *i;
-    MapLocation *j;    
+    MapLocation *j;
 }
 
-@property (nonatomic,retain) UIViewController *listView;
-@property (nonatomic,retain) MapDetailViewController *detailedMapView;
+@property (nonatomic,retain) FirstViewController *listView;
+@property (nonatomic,retain) SecondViewController *detailedMapView;
 @property (nonatomic, retain) NSMutableArray *locArray;
 @property (nonatomic,retain) MapLocation *a;
 @property (nonatomic,retain) MapLocation *b;

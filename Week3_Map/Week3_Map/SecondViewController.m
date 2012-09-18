@@ -6,11 +6,12 @@
 //  Copyright (c) 2012 Nicholas Weil. All rights reserved.
 //
 
-#import <MapKit/MapKit.h>
+
 #import "SecondViewController.h"
-#import "AppDelegate.h"
+#import <MapKit/MapKit.h>
 #import "MapLocation.h"
 #import "FirstViewController.h"
+#import "AppDelegate.h"
 
 
 @interface SecondViewController ()
@@ -18,7 +19,7 @@
 @end
 
 @implementation SecondViewController
-@synthesize listView,a,b,c,d,e,f,g,h,i,j;
+@synthesize listView,a,b,c,d,e,f,g,h,i,j,arrayDisplayLoc,arrayDisplayName;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -40,7 +41,6 @@
     if (!pinView)
         pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"PinAnnotation"];
     else
-        
         pinView.enabled = YES;
     pinView.canShowCallout = YES;
     
@@ -55,6 +55,7 @@
 }
 
 
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:TRUE];
@@ -62,8 +63,8 @@
     MKCoordinateRegion newRegion;
     newRegion.center.latitude = 28.535143;
     newRegion.center.longitude = -81.382871;
-    newRegion.span.latitudeDelta = .5;
-    newRegion.span.longitudeDelta = .5;
+    newRegion.span.latitudeDelta = .4;
+    newRegion.span.longitudeDelta = .4;
     
     self.listView.delegate = self;
     
@@ -75,13 +76,16 @@
     
     
     [listView removeAnnotations:listView.annotations];
-    for (int counter = 0; arrayDisplayLoc.count > counter; counter++)
+    for (int k = 0; arrayDisplayLoc.count > k; k++)
     {
-        MapLocation *locations = [arrayDisplayLoc objectAtIndex:counter];
+        MapLocation *locations = [arrayDisplayLoc objectAtIndex:k];
         [listView addAnnotation:locations];
     }
     
 }
+
+
+
 - (void)viewDidUnload
 {
     [super viewDidUnload];

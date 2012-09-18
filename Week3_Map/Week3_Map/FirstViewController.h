@@ -16,12 +16,12 @@
     IBOutlet UITableView *locationListView;
     NSMutableArray *locationArray;
     MapLocation* getLocation;
-    __weak IBOutlet UIButton *editBtn;
+    //    __weak IBOutlet UIButton *editBtn;
 }
 
 @property (nonatomic) NSMutableArray *locationArray;
-@property (weak, nonatomic) IBOutlet UIButton *editBtn;
+//@property (weak, nonatomic) IBOutlet UIButton *editBtn;
 
--(IBAction)editTable:(id)sender;
+//-(IBAction)editTable:(id)sender;
 
 @end

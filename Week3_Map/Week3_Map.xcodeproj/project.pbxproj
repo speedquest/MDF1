@@ -31,8 +31,6 @@
 		A4900A831602E27C004F9C4A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4900A811602E27B004F9C4A /* Default@2x.png */; };
 		A4900A861602E2CD004F9C4A /* BoxIcon57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = A4900A841602E2CD004F9C4A /* BoxIcon57x57.png */; };
 		A4900A871602E2CD004F9C4A /* BoxIcon114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = A4900A851602E2CD004F9C4A /* BoxIcon114x114.png */; };
-		A4900A891602E2DE004F9C4A /* BoxIcon57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = A4900A881602E2DE004F9C4A /* BoxIcon57x57.png */; };
-		A4900A8B1602E2EB004F9C4A /* BoxIcon114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = A4900A8A1602E2EB004F9C4A /* BoxIcon114x114.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -224,8 +222,6 @@
 				A4900A831602E27C004F9C4A /* Default@2x.png in Resources */,
 				A4900A861602E2CD004F9C4A /* BoxIcon57x57.png in Resources */,
 				A4900A871602E2CD004F9C4A /* BoxIcon114x114.png in Resources */,
-				A4900A891602E2DE004F9C4A /* BoxIcon57x57.png in Resources */,
-				A4900A8B1602E2EB004F9C4A /* BoxIcon114x114.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

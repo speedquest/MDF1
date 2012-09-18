@@ -23,6 +23,6 @@
 }
 
 @property (retain) IBOutlet MKMapView *mapTheView;
--(IBAction)implementMap:(CLLocationCoordinate2D)coord title:(NSString *)warehouseName;
+-(IBAction)implementMap:(CLLocationCoordinate2D)coord title:(NSString *)title;
 
 @end

@@ -1,3 +1,4 @@
+
 //
 //  MapDetailViewController.m
 //  Week3_Map
@@ -40,7 +41,7 @@
     NSString *mCoord = [[NSString alloc]initWithFormat:@"Lon: %f Lat: %f", coord.longitude, coord.latitude];
     
     locationName.text = title;
-    locationName.text = mCoord;
+    latLong.text = mCoord;
     
     MKCoordinateRegion newRegion;
     newRegion.center.latitude = coord.latitude;
@@ -60,7 +61,7 @@
 	
 	sendDetail1=[[MapLocation alloc] init];
 	sendDetail1.coordinate=location;
-	sendDetail1.warehouseName=title;
+	sendDetail1.title=title;
 	sendDetail1.warehouseDetail=@"Details";
     
     [mapTheView addAnnotation:sendDetail1];

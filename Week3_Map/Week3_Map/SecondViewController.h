@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MapLocation.h"
 #import <MapKit/MapKit.h>
+#import "MapLocation.h"
 
 
 @interface SecondViewController : UIViewController <MKMapViewDelegate>
@@ -29,8 +29,8 @@
     
     NSMutableArray *arrayDisplayName;
     NSMutableArray *arrayDisplayLoc;
-
- 
+    
+    
 }
 
 @property (retain) IBOutlet MKMapView *listView;

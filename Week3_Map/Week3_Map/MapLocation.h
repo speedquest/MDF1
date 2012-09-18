@@ -12,12 +12,12 @@
 @interface MapLocation : NSObject <MKAnnotation>
 {
     CLLocationCoordinate2D coordinate;
-    NSString* warehouseName;
+    NSString* title;
     NSString* warehouseDetail;
 }
 
 @property (nonatomic, assign)	CLLocationCoordinate2D	coordinate;
-@property (nonatomic, copy)		NSString*				warehouseName;
+@property (nonatomic, copy)		NSString*				title;
 @property (nonatomic, copy)		NSString*				warehouseDetail;
 
 @end

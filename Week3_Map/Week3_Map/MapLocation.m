@@ -12,8 +12,8 @@
 
 // Establish the coordinate variable
 @synthesize coordinate;
-// Establish the warehouseName variable (Actual Warehouse Name)
-@synthesize warehouseName;
+// Establish the title variable (Actual Warehouse Name)
+@synthesize title;
 // Establish the warehouseDetail variable (Details about the warehouse)
 @synthesize warehouseDetail;
 
