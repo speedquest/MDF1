@@ -39,7 +39,7 @@
 					<object class="IBUILabel" id="597652474">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{76, 261}, {168, 31}}</string>
+						<string key="NSFrame">{{76, 216}, {168, 31}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="264524699"/>
@@ -78,9 +78,10 @@
 					<object class="IBUILabel" id="264524699">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{76, 311}, {168, 31}}</string>
+						<string key="NSFrame">{{76, 266}, {168, 31}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
@@ -107,6 +108,7 @@
 						<string key="NSFrameSize">{320, 258}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="597652474"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
@@ -116,7 +118,7 @@
 				<string key="NSFrame">{{0, 20}, {320, 460}}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView" ref="597652474"/>
+				<reference key="NSNextKeyView" ref="610935461"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
 					<bytes key="NSWhite">MQA</bytes>
@@ -173,9 +175,9 @@
 						<int key="objectID">1</int>
 						<reference key="object" ref="191373211"/>
 						<array class="NSMutableArray" key="children">
+							<reference ref="610935461"/>
 							<reference ref="597652474"/>
 							<reference ref="264524699"/>
-							<reference ref="610935461"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -230,13 +232,13 @@
 					<string key="superclassName">UIViewController</string>
 					<object class="NSMutableDictionary" key="actions">
 						<string key="NS.key.0">implementMap:title:</string>
-						<string key="NS.object.0">CLLocationCoordinate2D</string>
+						<string key="NS.object.0">id</string>
 					</object>
 					<object class="NSMutableDictionary" key="actionInfosByName">
 						<string key="NS.key.0">implementMap:title:</string>
 						<object class="IBActionInfo" key="NS.object.0">
 							<string key="name">implementMap:title:</string>
-							<string key="candidateClassName">CLLocationCoordinate2D</string>
+							<string key="candidateClassName">id</string>
 						</object>
 					</object>
 					<dictionary class="NSMutableDictionary" key="outlets">
