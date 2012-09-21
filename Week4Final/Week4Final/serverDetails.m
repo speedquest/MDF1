@@ -17,6 +17,9 @@
         name = computersName;
         type = usedFor;
     }
+    NSLog(@"Server Name: %@", name);
+    NSLog(@"# of Servers: %@", type);
+
     return self;
 }
 

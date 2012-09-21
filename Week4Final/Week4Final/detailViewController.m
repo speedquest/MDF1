@@ -54,6 +54,7 @@
     [outputText appendString:tempServer];
     [outputText appendString:tempQuantity];
     detailViewInfo.text = outputText;
+    
 }
 
 

@@ -55,7 +55,8 @@
         }
         //  NSLog(@"%@",requestData);
     }
-    
+    newDetailView.frame = CGRectMake(320.0f, 0.0f, newDetailView.frame.size.width, newDetailView.frame.size.height);
+    initialTable.frame = CGRectMake(0.0f, 0.0f, initialTable.frame.size.width, initialTable.frame.size.height);
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -85,6 +86,10 @@
 
 - (void)viewDidUnload
 {
+    newDetailView = nil;
+    backButton = nil;
+    serverQ = nil;
+    serverN = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -164,16 +169,28 @@
  //  Once a row is selected, this determines the row and passes the info for displaying in the detailed view
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    detailViewController *inDepthView
+    /* detailViewController *inDepthView
     = [[detailViewController alloc] initWithNibName:@"detailViewController" bundle:nil];
     [self.navigationController pushViewController:inDepthView animated:TRUE];
+     */
     serverDetails *serverXML = [computers objectAtIndex:indexPath.row];
     NSString *serverName = [serverXML valueForKey:@"name"];
     NSString *serverQuantity = [serverXML valueForKey:@"type"];
     NSLog(@"passed %@",serverName);
     NSLog(@"passed %@",serverQuantity);
-    [inDepthView detailName:serverName type:serverQuantity];
+    serverN.text = serverName;
+    serverQ.text = serverQuantity;
+    
+    // [inDepthView detailName:serverName type:serverQuantity];
+        [UIView beginAnimations:nil context:nil];
+    newDetailView.frame = CGRectMake(0.0f, 0.0f, newDetailView.frame.size.width, newDetailView.frame.size.height);
+    [UIView commitAnimations];
     
 }
-
+-(IBAction)backButton:(id)sender
+{
+    [UIView beginAnimations:nil context:nil];
+    newDetailView.frame = CGRectMake(320.0f, 0.0f, newDetailView.frame.size.width, newDetailView.frame.size.height);
+    [UIView commitAnimations];
+}
 @end

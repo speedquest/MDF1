@@ -17,6 +17,7 @@
     NSURL *url;
     NSMutableData *requestData;
     
+    __weak IBOutlet UIView *newDetailView;
     //  Data variables from array
     NSMutableArray *computers;
     //  Keep track of which row/item
@@ -25,6 +26,10 @@
     IBOutlet UITableView *tableViewFeed;
     // detailView Controller
     detailViewController *detailView;
+    __weak IBOutlet UILabel *serverN;
+    __weak IBOutlet UILabel *serverQ;
+    __weak IBOutlet UIButton *backButton;
+    __weak IBOutlet UITableView *initialTable;
 }
 
 @property (strong, nonatomic) NSURLRequest *request;
@@ -40,5 +45,6 @@
 @property (strong, nonatomic) IBOutlet UITableView *tableViewFeed;
 @property (strong, nonatomic) detailViewController *detailView;
 
+-(IBAction)backButton:(id)sender;
 
 @end
